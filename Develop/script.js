@@ -17,15 +17,44 @@ var uppercaseletters = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 var specialcharacters = [ '!', '@', '#', '$', '%', '^',
  '&', '*', '(', ')', '~']
 
+
+
+
+
+
+
+
+// Write password to the #password input
+function writePassword() {
+    var correct =  Prompts();   //boolean value, t or f, if or else.
+
+  if(correct) {
+    var newPassword = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = newPassword;
+  }
+}
+
+
+
+
+
  
- // password function 
-
- function makePassword() {
-  var password = gereratePassword();
+ // password function using prompts to generatePassword
 
 
+  function gereratePassword() {
+  var password = "";
+  for(var i = 0; i < characterLength; i++) {
+    var imput = Math.floor(Math.random() * characters.length);
+       password = password + characters[imput];
+  }
+  return password;
+}
 
- }
+
+
+ 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -41,17 +70,9 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 
-// Write password to the #password input
 
 
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 
 // Adding characters prompts for the user
