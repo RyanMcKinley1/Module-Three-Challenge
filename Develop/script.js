@@ -43,7 +43,7 @@ function writePassword() {
  // password function using prompts to generatePassword
 
 
-  function gereratePassword() {
+  function generatePassword() {
   var password = "";
   for(var i = 0; i < characterLength; i++) {
     var imput = Math.floor(Math.random() * characters.length);
