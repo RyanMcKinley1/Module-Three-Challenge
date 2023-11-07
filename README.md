@@ -13,7 +13,9 @@ N/A
 
 ## Usage
 
-N/A
+-Input a desired password length.
+-Follow the prompts for password element selections.
+-Random password will generate in the center box. 
 
 ## Credits
 
